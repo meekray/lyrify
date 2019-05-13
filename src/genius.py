@@ -1,13 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 
-def genius():
-    url = 'https://genius.com/Ed-sheeran-and-justin-bieber-i-dont-care-lyrics'
-
-    r = requests.get(url)
-    bs = BeautifulSoup(r.text, 'html.parser')
-
-    print (bs.prettify())
+def scrap_song_url(url):
+    song = requests.get(url)
+    html = BeautifulSoup(song.text, 'html.parser')
+    lyrics = html.find('div', class_='lyrics').get_text()
+    return lyrics
     
 if __name__ == "__main__":
-    genius()
+    print (scrap_song_url('https://genius.com/Drake-jungle-lyrics'))
