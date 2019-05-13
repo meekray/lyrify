@@ -1,0 +1,12 @@
+# Ignore Python generated files
+*.pyc
+__pycache__/
+*.egg-info*
+dist/
+env/
+venv/
+venv3/
+.venv/
+raw_data/
+.DS_Store
+build/
