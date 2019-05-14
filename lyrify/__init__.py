@@ -1,3 +1,2 @@
-CLIENT_ID = 'KJgCh46Mr8VzVkCQZV7HRXYBXS_Z9yMOLaYu8R3qfZsUBWEShyooAvLuOhMKKnhP'
-CLIENT_SECRET = 'JLhS5RAL7i1a4PvwxXDaoXFmnEI0foeDX3MsfeI8BiAKfcMESCARwqWbNYXxW9fjZ1yBrqgdP0C9URT4dsRAXg'
-CLIENT_ACCESS_TOKEN = '0WC_cbJAXJe9HJDccSu79iwh7C-YJVuPxwz5Sw_i4X8aFFkGa8AruL-fvxDFM4gW'
+"""Lyrify package initializer."""
+from lyrify.__main__ import *

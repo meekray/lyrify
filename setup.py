@@ -16,7 +16,8 @@ setup(name='lyrify',
         'pandas',
         'requests',
         'flask',
-        'pprint'
+        'pprint',
+        'pymongo'
       ],
       entry_points={
           'console_scripts': [

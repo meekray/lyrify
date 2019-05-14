@@ -3,7 +3,7 @@
 from bs4 import BeautifulSoup
 from flask import Flask
 from pprint import pprint
-from lyrify import CLIENT_ID, CLIENT_SECRET, CLIENT_ACCESS_TOKEN
+from lyrify.config import *
 import requests
 import sys
 
@@ -16,8 +16,20 @@ class SpotifyAPI():
         self.song = "Street lights"
         self.artist = "Kanye West"
 
+    def retrieve_current_song_info():
+        return NotImplementedError
+    
+    def play_song(song):
+        return NotImplementedError
+
+    def get_song_artwork(song):
+        return NotImplementedError
+
 class GeniusAPI():
-    authority = 'https://api.genius.com/'
+    AUTHORITY = 'https://api.genius.com/'
+
+    def __init__(self):
+        _ = 0
 
     @classmethod
     def get_song_url(self, artist, song, album = None):
@@ -25,7 +37,7 @@ class GeniusAPI():
         if album:
             query += album
         
-        search_endpoint = ''.join([self.authority, 'search?q=', query, '&access_token=', CLIENT_ACCESS_TOKEN])
+        search_endpoint = ''.join([self.AUTHORITY, 'search?q=', query, '&access_token=', CLIENT_ACCESS_TOKEN])
         response = requests.get(search_endpoint).json()
 
         if response['meta']['status'] == 200 and len(response["response"]["hits"]) > 0:
