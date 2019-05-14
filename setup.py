@@ -5,6 +5,8 @@ Installs all dependencies and installs lyrify as a python package.
 
 from setuptools import setup
 
+# pip install -e .
+
 setup(name='lyrify',
       packages=['lyrify'],
       version='0.1.0',
@@ -13,7 +15,8 @@ setup(name='lyrify',
         'bs4',
         'pandas',
         'requests',
-        'flask'
+        'flask',
+        'pprint'
       ],
       entry_points={
           'console_scripts': [
