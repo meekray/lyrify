@@ -10,4 +10,5 @@ venv3/
 raw_data/
 .DS_Store
 build/
-lyrify/config.py
+keys.py
+lyrify/node_modules/
